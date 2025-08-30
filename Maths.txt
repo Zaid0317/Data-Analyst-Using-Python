@@ -1,0 +1,77 @@
+we have learned mean,median,mode
+data=[50,70,70,90,45,76,99,88]
+
+1. mean= adding all data / divided by number of values
+    =588/8
+    =73.5 rounding to 73
+    mean is 73
+
+2. median is the middle value of data if data is in odd series
+    here we have even data so we will arrange them is ascending order= [45,50,70,70,76,88,90,99]
+     =(70+76) /2 = 73
+     =median is 73
+
+3. mode is the value most occured in the data
+    here mode is 70
+
+
+
+NOTE: outliers, percentage and ratios and some machine learning terms have been written in notebook
+
+
+
+4. we moving with basics algebra.... remember the equation:  y=mx + b
+
+    lets take an example, u are an HR in a company, every employee working one day will get 500 as an income
+    1000 as joining bonus (fixed for everyone)
+    day 0- 1000 (joining bonus) income
+    day 1- 1500 income
+    day 2- 2000 income
+    day 3- 2500 income
+    a pattern everyday, lets keep thison the above equation, here we keep:
+
+    y=mx + b
+
+    y- final salary to predict, (actually in ML it is called output/result)
+    x- days worked, (this is input) jo already pata hai
+    m- 500/day, (rate of change) kitna effect pad rha h 'x' ka 'y' ke upar
+    b= 1000 bonus, (it means stating point like when we started it was DAY 0-1000) mtlb starting value kya hogi jab
+    kuch bhi kaam nahi hua hai jaise joining bonus ka Eg 
+
+    y= 500 * x + 1000
+    lets assume somebody worked 4 days:
+    y= 500 * 4 + 1000
+    y= 3000
+
+
+5. Plotting X vs Y (coding with sagar not explained full)
+
+    x= independent variable input
+    y= dependent variable
+
+
+6. Vectors
+    
+    maan lete h mai ar mera frnd ek park mei khade hai , wahan se teen(3) step aage gaye aur chaar(4) step
+    wahan se right leliye, yani apki position kya hogyi= (3,4) ab ye btata h ki aap kidr ho and konse direction mei
+    aap move kiya , ye value jo dikh rhi h yahi vectors hote list of numbers jo direction and distance btati h
+
+    vector mean to store data about an object in numbers jaise maan lete h apki frnd ki height h 170cm and 
+    weight 70kg isse vector mei kaise present krenge= [170,70]
+
+    ML mei jo single data point hota h usko as a vector store kiya jta h jo whole data hota h jaise student ka
+    usko bunch of vectors pe store krte h, mtlb compare krenge ki ye do(2)log similiar hai ya dur h
+
+
+7. Standard Deviation
+
+    Standard deviation is a measure of how spread out or dispersed the values in a dataset are. standard deviation
+    ka istemal khn hota h ML mei: to analyze dataset kitna consistent hai agr low h mtlb sabhi log similiar perform
+    kr rhe hai. high standard deviation hai toh koi bohot acha kr rha h to koi bht bura kr rha h. ML mei iska
+    istemal data preparation, normalization kiya jata h 
+    ->If the values are close to the mean, the standard deviation is small. for eg: class A: 60,62,59,61,60
+    ->If the values are far from the mean, the standard deviation is large(spread out).Eg: class B: 10,50,80,100
+     
+
+So itni he maths apko basic prerequiste hai ML start krne ko... apko formula solve krne ni aana chahiye, apko samjh
+mei aana chahiye ki wo kar kya rhe h ar unka matlab kya h

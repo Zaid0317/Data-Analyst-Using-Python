@@ -1,0 +1,108 @@
+
+Foundation of ML: line by line concepts
+
+    1. understand ML purpose:   grasp the role of ML in real-world application
+    2. Diffrentiate AI,ML and Deep Learning:   distinguish between these related field
+    3. explore ML types:   learn about supervised, unsupervised, and reinforcement learning
+    4. grasp core ML concepts:  understand input,output,model,training,testing, and prediction
+    5. understand scikit learn role:  learn how sciikit-learn fits into the ML pipeline
+
+What is actually Machine learning?
+
+    take an exampleof real life:
+    humlog teeno (hum,kaifi,ainun) jaate hai 'Ayaan Fast FOOD' ke pas daily chicken roll khane. jaise
+    jayenge unko pata hai:
+    1. humlog daily 7:30 ko aate hai
+    2. humlog hamesha teen(3) aate h
+    3. mere wale mein mei onion nahi dalna hai
+    4. aate sath assamualaikum krta hai
+
+    humlog jaakr whn kuch bolte bhi nhi frbhi wo samjh jaate hai... WHY?? "Because woh humare purane patterns se".
+    this is called machine learning
+
+Machine Learning is when a machine or a computer learn from the past data to make smart decisions or prediction
+
+Lets take more example:
+
+    1. Jaise youtube recommendation dekha hoga, youtube seekhta hai apko kya dkhna pasand h, jaise songs, so based on
+    historical data youtube apko song ki playlist bankr de degi...
+    
+    2. i am using smart watch so usually i sleep at 11:30 or 12:00, if someday i will be late to sleep 
+    then automatically my watch will notify me this is your time to sleep... kya horha h? usko kaise pata
+    mai issi time pe sora hun??? ye continuously moniter krta hai apke data ko.
+
+Three important points:
+
+    1. FEEL IT- memorize nhi feel kro, agar aap feel krte ho ki kaise AYAAN FAST FOOD usne apke
+    pattern se apko kya psnd h usne seekha.
+    2. STORY is always GREATER THAN FORMULA- hamesha real life example se connect krke he koi bhi cheez 
+    sikhne ki kohsish kriye sirf formula ke piche mat bhagiye
+    3. BUILD MUSCLES SLOWLY
+
+
+Types of ML:
+
+    1. Supervised learning definition: Ideal for task with labeled data where the desired output is known.
+        Example: aap maths sikhre ho and teacher ne apko kuch questions diye h sth mei answers bhi
+        jaise 2+2=4, 3+5=8, 10+1=11, TR ne 2 digit ko add kaise krte h wo sikhaya, ab wo teacher apse puchra
+        hai btao agr mai 4+6 krun toh kya ayega, mai bolunga 10 bcoz maine pattern samajh liya...
+        isi ko bolte h supervised learning mtlb aap machine ko data to dete ho sth mei correct answer bhi dete ho
+
+    2. Unsupervised learning: suitable for identifying patterns in unlabeled data without explicit guidance..
+        Example: maan lete hai aap ek party ke andr ghuste hoek room hai 100 log h wahan aap new(stranger) ho
+        aap unke naame ni jnte, unka job ni jante, age kya h, but aap ek chiz kr skte h- jo formal clothes
+        mein, waise 30log dikhe toh aap unhe ek alg room mei rakh diya, fr aapne age group krdiya ya to koi 
+        teenage hoga ya adult, ya fir aapne ek aur category dekhi koi dance kr rha h to koi khana kha rha h.
+        aapne iss category mei bhi 2 log ko group krdiya.. toh aapne kya kiya? aapne clusters ban liye 
+        based on patterns.. isse kehte h unsupervised learning, yhn machine ko sirf data milta h(input)
+
+    3. reinforcement learning: best for training agents to make decision through interactiion with
+    an environment
+        example: machine yhn pe sikhti hai by interacting with the environment getting rewards or penalties
+        and uski jo strategy h woh improve krte rhti h
+
+
+Core ML concepts overview:
+
+    1. input(X) and 2. output(y): 'X is a question', eg- kitne ghante aapne padhayi kri? 'y is the answer'
+    remember 'x' hamesha capital rhega
+    3. model: maan lete h apka dimaag ne ek rule bna liya h, jaise jaise mai 1 hour of study increase 
+    krta hun 5 marks increase hote jate h, ML mei aap model ko ek logic keh skte ho jo computer ko prediction
+    krne mei madad krega
+    4. training: ye data rha ab isme se pattern nikalo
+    5. testing: 
+    6. prediction:
+    explained in notebook.....
+
+
+why do we use 2d list ??
+In scikit-learn:
+
+Every dataset is represented as a 2D array (matrix):
+Rows = samples (examples, records, data points)
+Columns = features (inputs, variables)
+ what does row= 1 example and column= 1 feature mean?  imagine this data set:
+ age    salary      city_encoded
+ 22     40000           0
+ 30     60000           1
+
+Row 1 → [22, 40000, 0] → represents one person (one example).
+
+Column 1 (age) → a feature of that person.
+
+Column 2 (salary) → another feature.
+
+Column 3 (city_encoded) → another feature.
+
+
+Always understand in a Regression problem statement Your output will be a continuous variable 
+
+Whenever you have in your output fixed number of categories then that becomes a classification problem.
+    suppose it just have two outputs than it becomes binary classification, if u have two or more than
+    it becomes multiclass classification
+
+
+
+Unsupervised learning:-
+    clustering: clustering mtlb hota h similiar cheezon ko ek sth group kr dena even unke upar labeling na ho.
+    remember- clustering value predict ni krta, ye sirf similiar data points ko group kr deta h    
