@@ -105,4 +105,24 @@ Whenever you have in your output fixed number of categories then that becomes a 
 
 Unsupervised learning:-
     clustering: clustering mtlb hota h similiar cheezon ko ek sth group kr dena even unke upar labeling na ho.
-    remember- clustering value predict ni krta, ye sirf similiar data points ko group kr deta h    
+    remember- clustering value predict ni krta, ye sirf similiar data points ko group kr deta h
+
+
+
+def calculate_cost(cart):
+    total_cost=0
+    for item in cart:
+        total_cost+= item['price'] * item['quantity']
+    print("total price is", total_cost)
+    discount= total_cost * 10/100
+    print("10% discounted price is: ")
+    return total_cost - discount
+        
+#example cart data        
+cart=[{'name':'apple', 'price':20, 'quantity':4},
+{'name':'banana', 'price':10, 'quantity':6},
+{'name':'orange', 'price':15, 'quantity':6}
+]
+
+#function call
+print(calculate_cost(cart))    
