@@ -1,0 +1,51 @@
+ CREATE OR REPLACE STORAGE INTEGRATION S3_Integration
+  TYPE = EXTERNAL_STAGE
+  STORAGE_PROVIDER = 'S3'
+  ENABLED = TRUE
+  STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::825765422200:role/Snowflake-Test-Role'
+  STORAGE_ALLOWED_LOCATIONS = ('s3://csv.test.file/')
+  COMMENT = 'Optional Comment'
+
+
+  //description Integration Object
+  desc integration S3_Integration;
+
+
+
+--------------------------------------------
+
+CREATE database test;
+
+create schema a1;
+
+create table a2 (
+Ranking	int,Username string,Subscribers	string ,Uploads	int,Views	int,Country string
+
+
+);
+
+select * from a2;
+
+//we have create a stage(object in snowflake that will store the location from AWS in which we hv our files available)
+	create stage test.a1.s1
+	url = 's3://csv.test.file'
+	storage_integration = s3_integration
+
+
+//desc stage s1
+
+
+copy into a2 
+from @s1		 ##stage name which we created
+file_format = (type=csv field_delimiter=',' skip_header=1 )
+on_error = 'continue'
+
+list @s1
+
+
+
+
+
+
+
+

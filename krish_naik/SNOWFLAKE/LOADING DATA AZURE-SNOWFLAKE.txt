@@ -1,0 +1,47 @@
+ CREATE OR REPLACE STORAGE INTEGRATION azure_integration
+  TYPE = EXTERNAL_STAGE
+  STORAGE_PROVIDER = 'AZURE'
+  STORAGE_AWS_ROLE_ARN = 'diff9540-a905-4291-a9ed........'
+  ENABLED = TRUE
+  STORAGE_ALLOWED_LOCATIONS = ('azure://snowflaketrial170.blob.core.windows.net/csv/')
+
+
+  desc STORAGE INTEGRATION azure_integration
+
+//drop storage integration azure_integration
+
+--------------------------------------------
+
+CREATE database azure_database
+
+create schema azure_schema
+
+create table azure_table (
+Ranking	int,Username string,Subscribers string ,Uploads int,Views int,Country string);
+
+
+select * from azure_table;
+
+//we have to create a stage(object in snowflake that will store the location from azure in which we hv our files available)
+	create stage azure_database.azure_schema.azure_s1		##azure_s1 is stage object
+	url = 'azure://snowflaketrial170.blob.core.windows.net/csv/'
+	storage_integration = azure_integration
+
+
+//desc stage s1
+
+
+copy into azure_table
+from @azure_s1
+file_format = (type=csv field_delimiter=',' skip_header=1 )
+on_error = 'continue'
+
+list @s1
+
+
+
+
+
+
+
+

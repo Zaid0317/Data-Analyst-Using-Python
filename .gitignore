@@ -1,0 +1,8 @@
+# .gitignore
+*.csv
+*.json
+*.data
+*.pickle
+__pycache__/
+*.pyc
+*.ipynb_checkpoints/
